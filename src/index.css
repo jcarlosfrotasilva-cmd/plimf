@@ -1,1 +1,166 @@
 @import "tailwindcss";
+
+.pdf-document {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: 13.333in 7.5in;
+    margin: 0;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background: #020617 !important;
+  }
+
+  body {
+    overflow: visible;
+  }
+
+  .screen-presentation {
+    display: none !important;
+  }
+
+  .pdf-document {
+    display: block !important;
+    background: #020617 !important;
+  }
+
+  .pdf-slide {
+    position: relative;
+    width: 13.333in;
+    height: 7.5in;
+    overflow: hidden;
+    break-after: page;
+    page-break-after: always;
+    background:
+      radial-gradient(circle at 12% 14%, rgba(14, 165, 233, 0.24), transparent 28%),
+      radial-gradient(circle at 88% 86%, rgba(126, 34, 206, 0.26), transparent 34%),
+      linear-gradient(135deg, #020617 0%, #172554 48%, #2e1065 100%) !important;
+    color: #fff;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .pdf-slide:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  /* The enlarged stage is scaled to the 16:9 page so dense slides stay intact. */
+  .pdf-slide__stage {
+    position: relative;
+    display: flex;
+    width: 153.846%;
+    height: 153.846%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 44px 64px 34px;
+    transform: scale(0.65);
+    transform-origin: top left;
+  }
+
+  .pdf-slide__topbar,
+  .pdf-slide__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #94a3b8;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+
+  .pdf-slide__topbar {
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+  }
+
+  .pdf-slide__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bae6fd;
+    font-weight: 700;
+  }
+
+  .pdf-slide__brand-mark {
+    display: grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0ea5e9, #7e22ce) !important;
+  }
+
+  .pdf-slide__brand-mark svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .pdf-slide__number {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  .pdf-slide__canvas {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 0 18px;
+  }
+
+  .pdf-slide__title {
+    margin: 0 0 4px;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .pdf-slide__subtitle {
+    margin: 0 0 18px;
+    text-align: center;
+    color: #7dd3fc;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .pdf-slide__content {
+    width: 100%;
+  }
+
+  .pdf-slide__content > div,
+  .pdf-slide__content .max-w-4xl,
+  .pdf-slide__content .max-w-5xl,
+  .pdf-slide__content .max-w-6xl,
+  .pdf-slide__content .max-w-7xl {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .pdf-slide__footer {
+    padding-top: 12px;
+    border-top: 1px solid rgba(148, 163, 184, 0.22);
+    color: #64748b;
+    font-size: 12px;
+  }
+
+  .pdf-slide *,
+  .pdf-slide *::before,
+  .pdf-slide *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .pdf-slide .animate-pulse {
+    animation: none !important;
+  }
+}

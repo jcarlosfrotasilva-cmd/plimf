@@ -28,10 +28,15 @@ function App() {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Manual do Gestor Escolar
           </h1>
-          <p className="text-2xl text-blue-200 mb-8">
+          <p className="text-2xl text-blue-200 mb-3">
             Secretaria da Educação - Estado de São Paulo
           </p>
-          <div className="grid md:grid-cols-4 gap-4 mt-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-6 py-3 mb-8 inline-block">
+            <p className="text-sm text-cyan-300">
+              <strong className="text-white">Público:</strong> QM (PEB II e Diretores) e QAE — Efetivos e ACT-F
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-4 mt-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
               <div className="text-3xl mb-2">📊</div>
               <div className="text-white font-bold">ATS</div>
@@ -202,8 +207,8 @@ function App() {
               </div>
             </div>
 
-            {/* Objetivo */}
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* Objetivo e Público-Alvo */}
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white/5 rounded-xl p-6 border border-white/10">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -233,6 +238,42 @@ function App() {
                   Esta Orientação Técnica e sua aplicabilidade nas unidades escolares fazem parte do 
                   <strong className="text-amber-400"> Plano de Ação da URE para o 2º Semestre de 2026</strong>, 
                   reforçando o compromisso com a <strong className="text-green-400">qualidade dos procedimentos de Gestão de Pessoas</strong> em toda a rede.
+                </p>
+              </div>
+            </div>
+
+            {/* Público-Alvo */}
+            <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-blue-500/30">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-blue-400 font-bold text-lg">Público-Alvo da Formação</h4>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h5 className="text-blue-300 font-bold mb-2 text-sm">👨‍🏫 Quadro do Magistério (QM)</h5>
+                  <ul className="space-y-1 text-gray-300 text-xs">
+                    <li>• <strong className="text-white">Professores PEB II</strong> (Ensino Fundamental e Médio)</li>
+                    <li>• <strong className="text-white">Diretores de Escola</strong></li>
+                    <li>• <strong className="text-cyan-400">Efetivos e ACT-F</strong></li>
+                  </ul>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                  <h5 className="text-purple-300 font-bold mb-2 text-sm">📋 Quadro de Apoio Escolar (QAE)</h5>
+                  <ul className="space-y-1 text-gray-300 text-xs">
+                    <li>• <strong className="text-white">Agentes de Serviços Escolares</strong></li>
+                    <li>• <strong className="text-white">Agentes de Organização Escolar</strong></li>
+                    <li>• <strong className="text-white">Secretários de Escola</strong></li>
+                    <li>• <strong className="text-cyan-400">Efetivos e ACT-F</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-4 p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg">
+                <p className="text-blue-300 text-xs text-center">
+                  <strong className="text-white">⚠️ Atenção:</strong> Os assuntos abordados referem-se especificamente aos servidores <strong className="text-green-400">efetivos e ACT-F</strong> do QM (PEB II e Diretores) e QAE.
                 </p>
               </div>
             </div>
@@ -477,8 +518,26 @@ function App() {
     {
       id: 6,
       title: "QM vs QAE - Diferenças entre Quadros",
+      subtitle: "🏥 Contexto: FALTAS MÉDICAS",
       content: (
         <div className="max-w-6xl mx-auto">
+          {/* Alerta de Contexto */}
+          <div className="bg-gradient-to-r from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-2xl p-6 mb-8 border-2 border-green-500/50">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-3xl flex-shrink-0">
+                🏥
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-green-400 mb-2">📌 Contexto deste Slide</h3>
+                <p className="text-gray-200">
+                  As diferenças entre QM e QAE apresentadas aqui referem-se especificamente às 
+                  <strong className="text-green-400"> FALTAS MÉDICAS</strong>, com foco na 
+                  <strong className="text-yellow-400"> falta médica parcial</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* QM */}
             <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-500/50">
@@ -539,11 +598,11 @@ function App() {
             <div className="flex items-start gap-4">
               <span className="text-3xl">⚠️</span>
               <div>
-                <h4 className="text-lg font-bold text-amber-400 mb-2">Diferença Crítica</h4>
+                <h4 className="text-lg font-bold text-amber-400 mb-2">Diferença Crítica - Faltas Médicas</h4>
                 <p className="text-gray-300">
                   As regras para <strong className="text-amber-400">faltas médicas</strong> são diferentes entre QM e QAE, 
                   especialmente quanto à <strong className="text-yellow-400">falta médica parcial</strong>. 
-                  Identifique corretamente o quadro do servidor!
+                  Identifique corretamente o quadro do servidor para aplicar a legislação adequada!
                 </p>
               </div>
             </div>
@@ -1435,6 +1494,37 @@ function App() {
             </div>
           </div>
 
+          {/* Público-Alvo no Resumo */}
+          <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-xl p-6 border border-blue-500/30 mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h4 className="text-blue-400 font-bold text-lg">Público-Alvo desta Formação</h4>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h5 className="text-blue-300 font-bold mb-2 text-sm">👨‍🏫 QM - Quadro do Magistério</h5>
+                <ul className="space-y-1 text-gray-300 text-xs">
+                  <li>• <strong className="text-white">Professores PEB II</strong> (EF e Médio)</li>
+                  <li>• <strong className="text-white">Diretores de Escola</strong></li>
+                  <li>• <strong className="text-cyan-400">Efetivos e ACT-F</strong></li>
+                </ul>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                <h5 className="text-purple-300 font-bold mb-2 text-sm">📋 QAE - Quadro de Apoio Escolar</h5>
+                <ul className="space-y-1 text-gray-300 text-xs">
+                  <li>• <strong className="text-white">Agentes de Serviços Escolares</strong></li>
+                  <li>• <strong className="text-white">Agentes de Organização Escolar</strong></li>
+                  <li>• <strong className="text-white">Secretários de Escola</strong></li>
+                  <li>• <strong className="text-cyan-400">Efetivos e ACT-F</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-red-500/20 border-2 border-red-500/50 rounded-xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <span className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-2xl">⚖️</span>
@@ -1453,6 +1543,122 @@ function App() {
             <p className="text-gray-300 mt-4 text-center">
               Resulta em <strong className="text-red-400">PAD</strong> e possível <strong className="text-red-400">Demissão</strong>
             </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 21,
+      title: "",
+      subtitle: "",
+      content: (
+        <div className="max-w-6xl mx-auto">
+          {/* Slide Final Institucional */}
+          <div className="bg-gradient-to-br from-slate-800/80 via-slate-900/80 to-slate-800/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl">
+            
+            {/* Header Governamental */}
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-4 mb-8">
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-blue-400/30">
+                  <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
+              
+              <div className="space-y-2 mb-8">
+                <p className="text-white text-lg md:text-xl font-bold tracking-wide">GOVERNO DO ESTADO DE SÃO PAULO</p>
+                <div className="h-px w-48 bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto"></div>
+                <p className="text-blue-400 text-base md:text-lg font-semibold">SECRETARIA DE ESTADO DA EDUCAÇÃO</p>
+                <div className="h-px w-64 bg-gradient-to-r from-transparent via-cyan-500 to-transparent mx-auto"></div>
+                <p className="text-cyan-400 text-sm md:text-base font-medium">UNIDADE REGIONAL DE ENSINO DE ARARAQUARA</p>
+              </div>
+            </div>
+
+            {/* Unidade Escolar */}
+            <div className="bg-gradient-to-r from-blue-600/20 via-cyan-600/20 to-blue-600/20 rounded-2xl p-8 mb-10 border border-blue-500/30">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">EE PROFA. MARLENE FRATTINI</h3>
+                <p className="text-gray-400 text-sm">Unidade Escolar</p>
+              </div>
+            </div>
+
+            {/* Gestores */}
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+              {/* Gestor Escolar */}
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-colors">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-blue-400 text-xs font-medium uppercase tracking-wider">Gestor Escolar</p>
+                    <h4 className="text-white text-lg font-bold">LUCILENA DO AMARAL</h4>
+                  </div>
+                </div>
+                <div className="h-px bg-gradient-to-r from-blue-500/50 to-transparent"></div>
+              </div>
+
+              {/* Gerente de Organização Escolar */}
+              <div className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-colors">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-full flex items-center justify-center shadow-lg">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-cyan-400 text-xs font-medium uppercase tracking-wider">Gerente de Organização Escolar</p>
+                    <h4 className="text-white text-lg font-bold">JOSÉ CARLOS FROTA DA SILVA</h4>
+                  </div>
+                </div>
+                <div className="h-px bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+              </div>
+            </div>
+
+            {/* Ano */}
+            <div className="bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-amber-600/20 rounded-xl p-6 border border-amber-500/30 text-center">
+              <div className="flex items-center justify-center gap-3">
+                <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
+                  <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-amber-300 text-sm font-medium">ANO DE REALIZAÇÃO</p>
+                  <p className="text-4xl font-bold text-amber-400">2026</p>
+                </div>
+                <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center">
+                  <svg className="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="mt-10 pt-6 border-t border-white/10 text-center">
+              <p className="text-gray-500 text-xs">
+                Orientação Técnica — Replicabilidade | Gestão de Pessoas
+              </p>
+              <div className="flex items-center justify-center gap-2 mt-3">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent to-blue-500"></div>
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                </div>
+                <div className="h-px w-16 bg-gradient-to-r from-blue-500 to-transparent"></div>
+              </div>
+            </div>
+
           </div>
         </div>
       ),
@@ -1496,8 +1702,22 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextSlide, prevSlide, goToSlide, slides.length]);
 
+  const exportToPdf = () => {
+    const previousTitle = document.title;
+    document.title = 'Orientacao_Tecnica_Replicabilidade_2026';
+
+    const restoreTitle = () => {
+      document.title = previousTitle;
+      window.removeEventListener('afterprint', restoreTitle);
+    };
+
+    window.addEventListener('afterprint', restoreTitle);
+    window.print();
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+    <div className="screen-presentation min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -1509,8 +1729,22 @@ function App() {
             </div>
             <h1 className="text-lg font-bold text-white hidden sm:block">Manual do Gestor Escolar</h1>
           </div>
-          <div className="text-gray-400 text-sm font-mono">
-            {currentSlide + 1} / {slides.length}
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={exportToPdf}
+              className="group flex items-center gap-2 rounded-lg border border-cyan-400/30 bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-100 transition-all hover:border-cyan-300/60 hover:bg-cyan-400/20"
+              title="Abrir a versão completa para salvar como PDF"
+            >
+              <svg className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a4 4 0 01-4-4V7a4 4 0 014-4h5l5 5v9a4 4 0 01-4 4z" />
+              </svg>
+              <span className="hidden sm:inline">Exportar PDF</span>
+              <span className="sm:hidden">PDF</span>
+            </button>
+            <div className="text-gray-400 text-sm font-mono">
+              {currentSlide + 1} / {slides.length}
+            </div>
           </div>
         </div>
       </header>
@@ -1593,6 +1827,39 @@ function App() {
         </div>
       </footer>
     </div>
+
+    {/* Documento completo usado exclusivamente pela impressão em PDF. */}
+    <section className="pdf-document" aria-hidden="true">
+      {slides.map((slide, index) => (
+        <article className="pdf-slide" key={`pdf-${slide.id}`}>
+          <div className="pdf-slide__stage">
+            <div className="pdf-slide__topbar">
+              <div className="pdf-slide__brand">
+                <span className="pdf-slide__brand-mark">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </span>
+                <span>Orientação Técnica | Gestão de Pessoas</span>
+              </div>
+              <span className="pdf-slide__number">{String(index + 1).padStart(2, '0')} / {slides.length}</span>
+            </div>
+
+            <div className="pdf-slide__canvas">
+              {slide.title && <h2 className="pdf-slide__title">{slide.title}</h2>}
+              {slide.subtitle && <p className="pdf-slide__subtitle">{slide.subtitle}</p>}
+              <div className="pdf-slide__content">{slide.content}</div>
+            </div>
+
+            <div className="pdf-slide__footer">
+              <span>URE Araraquara | EE Profa. Marlene Frattini</span>
+              <span>Plano de Ação | 2º Semestre de 2026</span>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+    </>
   );
 }
 
